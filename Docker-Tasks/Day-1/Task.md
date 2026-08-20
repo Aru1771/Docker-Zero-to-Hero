@@ -109,3 +109,14 @@ Give me:
 3. Build command
 4. Jenkins cache strategy
 5. Answers to the 10 interview questions
+
+
+One thing to verify
+
+If your application produces build/ instead of dist/, change:
+
+COPY --from=build /app/dist ./dist
+
+to:
+
+COPY --from=build /app/build ./build
